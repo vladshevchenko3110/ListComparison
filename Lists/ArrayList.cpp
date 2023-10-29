@@ -39,7 +39,7 @@ void ArrayList::insertAt(int index, int value) {
     }
 
     if (size >= capacity) {
-        // «б≥льшуЇмо Їмн≥сть масиву, €кщо в≥н заповнений
+        
         capacity *= 2;
         int* newData = new int[capacity];
         for (int i = 0; i < size; i++) {

@@ -1,9 +1,9 @@
 #pragma once
 class ArrayList {
 private:
-    int* data;      // Динамічний масив для зберігання елементів
-    int size;       // Поточний розмір масиву
-    int capacity;   // Поточна ємність масиву
+    int* data;      
+    int size;       
+    int capacity;   
 
 public:
     ArrayList(int initialCapacity = 10);
