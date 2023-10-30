@@ -112,22 +112,23 @@ void IndexLists(ArrayList& arraylist, LinkedList& linklist) {
 }
 
 void IteratorLists(ArrayList& arraylist, LinkedList& linklist) {
-    int count1 = -1;
+    int count1 = 0;
     Timer t1;
     for (ArrayList::Iterator it = arraylist.begin(); it != arraylist.end(); ++it) {
         count1++;
-        if (count1 == N / 2) {
-            cout << "Elemend #" << N / 2 << ": " << *it << endl;
+        if (count1 == arraylist.getSize() / 2) {
+            cout << "Elemend #" << arraylist.getSize() / 2 << ": " << *it << endl;
         }
     }
     cout << "Iterator in ArrayList : " << t1.elapsed() << " sec" << '\n';
 
-    int count2 = -1;
+
+    int count2 = 0;
     Timer t2;
     for (LinkedList::Iterator it = linklist.begin(); it != linklist.end(); ++it) {
         count2++;
-        if (count2 == N / 2) {
-            cout << "Elemend #" << N/2 << ": " << *it << endl;
+        if (count2 == linklist.getSize() / 2) {
+            cout << "Elemend #" << arraylist.getSize() / 2 << ": " << *it << endl;
         }
     }
     cout << "Iterator in LinkedList : " << t2.elapsed() << " sec" << '\n';
