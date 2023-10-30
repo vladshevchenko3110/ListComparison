@@ -89,12 +89,25 @@ void MiddleLists(ArrayList& arraylist, LinkedList& linklist) {
 
 void IndexLists(ArrayList& arraylist, LinkedList& linklist) {
     Timer t1;
-    cout << "Elemend #" << N / 2 << ": " << arraylist.get(N / 2) << endl;
+    cout << "Elemend #" << 1 << ": " << arraylist.get(0) << endl;
     cout << "Index in ArrayList : " << t1.elapsed() << " sec" << '\n';
+    Timer t4;
+    cout << "Elemend #" << 1 << ": " << linklist.getAt(0) << endl;
+    cout << "Index in LinkedList : " << t4.elapsed() << " sec" << endl << endl;
 
     Timer t2;
-    cout << "Elemend #" << N / 2 << ": " << linklist.getAt(N / 2) << endl;
-    cout << "Index in LinkedList : " << t2.elapsed() << " sec" << '\n';
+    cout << "Elemend #" << arraylist.getSize() / 2 << ": " << arraylist.get(arraylist.getSize() / 2 - 1) << endl;
+    cout << "Index in ArrayList : " << t2.elapsed() << " sec" << '\n';
+    Timer t5;
+    cout << "Elemend #" << linklist.getSize() / 2 << ": " << linklist.getAt(linklist.getSize() / 2 - 1) << endl;
+    cout << "Index in LinkedList : " << t5.elapsed() << " sec" << endl << endl;
+
+    Timer t3;
+    cout << "Elemend #" << arraylist.getSize() << ": " << arraylist.get(arraylist.getSize() - 1) << endl;
+    cout << "Index in ArrayList : " << t3.elapsed() << " sec" << '\n';
+    Timer t6;
+    cout << "Elemend #" << linklist.getSize() << ": " << linklist.getAt(linklist.getSize() - 1) << endl;
+    cout << "Index in LinkedList : " << t6.elapsed() << " sec" << endl << endl;
     cout << endl;
 }
 
